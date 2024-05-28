@@ -37,7 +37,7 @@ const LoginForm = () => {
     const onFinish = async (values) => {
         try {
             setLoading(true);
-            const response = await axios.patch(`${anotherApiUrl}api/auth/login`, values);
+            const response = await axios.patch(`${apiUrl}api/auth/login`, values);
             const { token, role } = response.data;
 
             localStorage.setItem('authToken', token);
